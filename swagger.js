@@ -5,8 +5,8 @@ const doc = {
     title: 'Professional Library API',
     description: 'API for managing books and authors in a professional library system',
   },
-  host: 'localhost:8080',
-  schemes: ['http'],
+  host: 'cse341-project2-68q3.onrender.com',
+  schemes: ['https'],
 };
 
 const outputFile = './swagger.json';

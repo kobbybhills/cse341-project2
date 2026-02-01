@@ -5,10 +5,10 @@
     "description": "API for managing books and authors in a professional library system",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cse341-project2-68q3.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "securityDefinitions": {
     "github_auth": {
@@ -42,6 +42,16 @@
       }
     },
     "/github/callback": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/": {
       "get": {
         "description": "",
         "responses": {

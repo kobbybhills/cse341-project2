@@ -37,4 +37,8 @@ router.get('/github/callback',
 router.use('/books', require('./books'));
 router.use('/authors', require('./authors'));
 
+// Home route redirects to API docs
+router.get('/', (req, res) => {
+  res.redirect('/api-docs');
+});
 module.exports = router;

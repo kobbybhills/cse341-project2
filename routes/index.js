@@ -17,12 +17,12 @@ router.get('/logout', function(req, res, next) {
     if (err) { return next(err); }
     req.session.destroy(function(err) {
       res.clearCookie('connect.sid'); 
-      res.redirect('/'); // Redirects to home route
+      res.redirect('/api-docs'); // Redirects to home route
     });
   });
 });
 
-// The GitHub Callback - session must be TRUE to persist login
+// The GitHub Callback URL
 router.get('/github/callback', 
   passport.authenticate('github', { 
     failureRedirect: '/api-docs', 
@@ -30,7 +30,7 @@ router.get('/github/callback',
   }),
   (req, res) => {
     // Passport automatically attaches the user to req.user
-    res.redirect('/');
+    res.redirect('/api-docs'); // Redirect to home or desired route after successful login
   });
 
 // --- API ROUTES ---
